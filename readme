@@ -1,0 +1,44 @@
+# Plugin Local Garbson API - Moodle
+
+Este é um plugin local para Moodle que fornece uma API personalizada para acessar informações sobre cursos e suas seções.
+
+## Descrição
+
+O plugin Garbson API implementa um serviço web que permite aplicações externas obterem dados estruturados dos cursos do Moodle. Ele segue os padrões oficiais de desenvolvimento de plugins do Moodle e utiliza o framework de web services nativo da plataforma.
+
+## Instalação
+
+Existem duas formas de instalar este plugin:
+
+### Método 1: Instalação via ZIP (recomendado)
+
+1. Faça o download do arquivo ZIP do plugin
+2. Acesse "Administração do site" > "Plugins" > "Instalar plugins"
+3. Arraste o arquivo ZIP para a área indicada ou selecione-o usando o botão de procurar
+4. Clique em "Instalar plugin do arquivo ZIP"
+5. Siga o processo de instalação e confirmação
+
+### Método 2: Instalação manual
+
+1. Extraia os arquivos do plugin
+2. Copie a pasta "garbsonapi" para o diretório "/local/" na sua instalação do Moodle
+3. Acesse o Moodle como administrador
+4. Vá para "Administração do site" > "Notificações" para concluir a instalação
+
+## Configuração
+
+Após a instalação, siga estas etapas para configurar e utilizar a API:
+
+1. Ative os Web Services em "Administração do site" > "Recursos avançados"
+2. Habilite o protocolo REST em "Administração do site" > "Plugins" > "Web services" > "Gerenciar protocolos"
+3. Crie um serviço em "Administração do site" > "Plugins" > "Web services" > "Serviços externos"
+4. Adicione a função "local_garbsonapi_get_courses_and_sections" ao serviço
+5. Crie um usuário com permissões apropriadas e gere um token para este usuário
+
+## Funções disponíveis
+
+- **local_garbsonapi_get_courses_and_sections**: Retorna todos os cursos visíveis com suas respectivas seções (exceto a seção 0).
+
+## Exemplo de uso
+
+Para acessar a API via REST:
